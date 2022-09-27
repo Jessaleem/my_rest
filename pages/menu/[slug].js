@@ -80,19 +80,20 @@ const MenuItem = ({ menuIt, jwt, error }) => {
         {user && (
           <>
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tighter mb-4 mt-4">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 py-2">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-goldBorder to-white py-2">
                 Reviews
               </span> 
               <form onSubmit={handleSubmit}>
                 <textarea
-                  className="w-full text-sm px-3 py-2 text-gray-700 border border-2 border-teal-400 rounded-lg focus:outline-none"
+                  className="w-full text-sm px-3 py-2 text-gray-700 border border-2 border-goldBorder rounded-lg focus:outline-none"
                   rows="4"
+                  cols="40"
                   value={review.value}
                   onChange={handleChange}
                   placeholder="Add your review"
-                ></textarea>
+                />
                 <button
-                  className="md:p-2 rounded py-2 text-black bg-purple-200 p-2"
+                  className="md:p-2 rounded py-2 text-black bg-goldBorder p-2"
                   type="submit"
                 >
                   Add Review
@@ -101,16 +102,16 @@ const MenuItem = ({ menuIt, jwt, error }) => {
             </h2>
             <ul>
                 {menuIt.attributes.reviews.data.length === 0 && (
-                  <span>No reviews yet</span>
+                  <span className="text-white">No reviews yet</span>
                 )} 
                 {menuIt.attributes.reviews.data &&
                   menuIt.attributes.reviews.data.map((review) => {
                     return (
                       <li key={review.id}>
-                        <span className="bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-white">
                           {review.attributes.reviewer}
                         </span>{' '}
-                        said &quot;{review.attributes.review}&quot;
+                        <span className="text-white">said</span> <span className="text-white"> &quot;{review.attributes.review}&quot; </span>
                       </li>
                     );
                   })}

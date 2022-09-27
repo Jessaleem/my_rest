@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import { GiShoppingCart } from 'react-icons/gi';
 import { BsChatSquareFill } from "react-icons/bs";

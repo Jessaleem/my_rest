@@ -1,12 +1,13 @@
+/* eslint-disable @next/next/no-img-element */
 const IntroPage = () => (
   <>
   <div className="flex flex-col items-center justify-center">
     <div className="block">
-      <img className="static my-20" src="https://res.cloudinary.com/jessaleem/image/upload/v1664080130/my_restaurant/Mi_proyecto-removebg-preview_tir8jh.png" />
+      <img className="static my-20" src="https://res.cloudinary.com/jessaleem/image/upload/v1664080130/my_restaurant/Mi_proyecto-removebg-preview_tir8jh.png" alt="" />
     </div>
     <div className="relative border-8 border-goldBorder justify-center">
       <h1 className="flex align-middle justify-center text-slate-300 font-mono items-center">Enjoy a unique gastronomic experience </h1>
-    <img src="https://res.cloudinary.com/jessaleem/image/upload/v1664081568/my_restaurant/arabescos_bareh4.webp" />
+    <img src="https://res.cloudinary.com/jessaleem/image/upload/v1664081568/my_restaurant/arabescos_bareh4.webp" alt="" />
     </div>
     <div className="flex flex-row justify-around mt-20">
       <div className="m-4 bg-white bg-opacity-25 w-96 text-center">
